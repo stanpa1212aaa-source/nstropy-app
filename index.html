@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Nstropy.cz – profesionální napínané stropy a osvětlení. Rychlá montáž, elegantní design, voděodolné řešení pro domácnosti i firmy." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="icon-192.png" />
+  <title>Nstropy – Napínané stropy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Splash -->
+  <div id="splash" class="splash">
+    <img src="logo-clean.png" alt="Nstropy logo" class="splash-logo" />
+    <div class="splash-text">Napínané stropy</div>
+    <div class="loader"></div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="header">
+      <div class="header-inner">
+        <img src="header-logo.png" alt="Nstropy" class="header-logo" />
+        <div class="header-title">
+          <span class="brand">Nstropy</span>
+          <span class="tagline">napínané stropy</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- HOME -->
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-badge">Brno & okolí</div>
+          <h1>Elegantní stropy<br>na míru</h1>
+          <p class="hero-desc">Moderní napínané stropy a osvětlení pro domácnosti i komerční prostory. Rychlá montáž, perfektní vzhled a dlouhá životnost.</p>
+          <div class="hero-actions">
+            <a href="tel:+420730507975" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Zavolat
+            </a>
+            <button class="btn btn-secondary" onclick="showPage('kalkulacka')">Kalkulačka →</button>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><div class="stat-num">1–2</div><div class="stat-label">dny montáž</div></div>
+          <div class="stat"><div class="stat-num">10–15</div><div class="stat-label">let životnost</div></div>
+          <div class="stat"><div class="stat-num">100%</div><div class="stat-label">voděodolné</div></div>
+        </div>
+
+        <div class="section">
+          <h2>Co nabízíme</h2>
+          <div class="cards">
+            <div class="card" onclick="showPage('galerie')">
+              <div class="card-icon">🖼️</div>
+              <h3>Galerie realizací</h3>
+              <p>Podívejte se na hotové projekty – byty, kanceláře, bazény i sportoviště.</p>
+            </div>
+            <div class="card" onclick="showPage('kalkulacka')">
+              <div class="card-icon">🧮</div>
+              <h3>Orientační kalkulačka</h3>
+              <p>Spočítejte si přibližnou cenu za m² podle typu fólie.</p>
+            </div>
+            <div class="card" onclick="showPage('poptavka')">
+              <div class="card-icon">📝</div>
+              <h3>Nezávazná poptávka</h3>
+              <p>Vyplňte formulář a my se vám ozveme s nabídkou.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIE -->
+      <section id="galerie" class="page">
+        <div class="page-header">
+          <h1>Galerie</h1>
+          <p>Ukázky našich realizací napínaných stropů a osvětlení.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox(0)">
+            <img src="gallery/g1.jpg" alt="Posilovna – podsvícený strop" loading="lazy" />
+            <div class="gallery-caption">Posilovna – LED osvětlení</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(1)">
+            <img src="gallery/g3.jpg" alt="Bazén Kyjov" loading="lazy" />
+            <div class="gallery-caption">Bazén – voděodolný strop</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(2)">
+            <img src="gallery/g4.jpg" alt="Chalupa" loading="lazy" />
+            <div class="gallery-caption">Rodinný dům</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(3)">
+            <img src="gallery/g5.jpg" alt="Interiér" loading="lazy" />
+            <div class="gallery-caption">Moderní interiér</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(4)">
+            <img src="gallery/g2.jpg" alt="Světelné detaily" loading="lazy" />
+            <div class="gallery-caption">Světelné detaily</div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(5)">
+            <img src="gallery/g6.jpg" alt="Komerční prostor" loading="lazy" />
+            <div class="gallery-caption">Komerční prostor</div>
+          </div>
+        </div>
+        <p class="gallery-note">Fotografie z reálných realizací Nstropy.cz</p>
+      </section>
+
+      <!-- KALKULAČKA -->
+      <section id="kalkulacka" class="page">
+        <div class="page-header">
+          <h1>Kalkulačka</h1>
+          <p>Orientační výpočet ceny. Finální nabídka po zaměření.</p>
+        </div>
+
+        <div class="calc-card">
+          <div class="form-group">
+            <label for="area">Plocha stropu (m²)</label>
+            <input type="number" id="area" min="1" max="500" step="0.1" value="20" inputmode="decimal" />
+          </div>
+
+          <div class="form-group">
+            <label for="type">Typ fólie</label>
+            <select id="type">
+              <option value="450">Mat / Satin bílý – od 450 Kč/m²</option>
+              <option value="520">Lesk bílý / barevný – od 520 Kč/m²</option>
+              <option value="650">Translucent (podsvícení) – od 650 Kč/m²</option>
+              <option value="800">S fototiskem – od 800 Kč/m²</option>
+              <option value="1400">Speciální / Double vision – od 1 400 Kč/m²</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="lighting">Osvětlení (příplatek)</label>
+            <select id="lighting">
+              <option value="0">Bez speciálního osvětlení</option>
+              <option value="180">LED pásky / body – +180 Kč/m²</option>
+              <option value="320">Celopodsvícený strop – +320 Kč/m²</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="complexity">Složitost místnosti</label>
+            <select id="complexity">
+              <option value="1">Jednoduchá (obdélník)</option>
+              <option value="1.15">Střední (více rohů / výklenky)</option>
+              <option value="1.3">Složitá (více úrovní, šikminy)</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary btn-full" onclick="calculatePrice()">Spočítat cenu</button>
+
+          <div id="calc-result" class="calc-result hidden">
+            <div class="result-label">Orientační cena</div>
+            <div class="result-price" id="result-price">0 Kč</div>
+            <div class="result-detail" id="result-detail"></div>
+            <p class="result-note">Cena je orientační a nezahrnuje dopravu. Přesnou nabídku připravíme po zaměření zdarma.</p>
+            <button class="btn btn-secondary btn-full" onclick="showPage('poptavka')">Nezávazná poptávka →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- POPTÁVKA -->
+      <section id="poptavka" class="page">
+        <div class="page-header">
+          <h1>Poptávka</h1>
+          <p>Vyplňte formulář a my se vám ozveme do 24 hodin.</p>
+        </div>
+
+        <form id="inquiry-form" class="inquiry-form" onsubmit="submitInquiry(event)">
+          <div class="form-group">
+            <label for="name">Jméno a příjmení *</label>
+            <input type="text" id="name" required placeholder="Jan Novák" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon *</label>
+            <input type="tel" id="phone" required placeholder="+420 777 123 456" inputmode="tel" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="jan@email.cz" />
+          </div>
+          <div class="form-group">
+            <label for="city">Město / lokalita</label>
+            <input type="text" id="city" placeholder="Brno" />
+          </div>
+          <div class="form-group">
+            <label for="area-form">Přibližná plocha (m²)</label>
+            <input type="number" id="area-form" min="1" placeholder="např. 25" />
+          </div>
+          <div class="form-group">
+            <label for="message">Poznámka / popis</label>
+            <textarea id="message" rows="3" placeholder="Typ místnosti, požadovaný vzhled, osvětlení..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Odeslat poptávku</button>
+          <p class="form-privacy">Odesláním souhlasíte se zpracováním osobních údajů za účelem vyřízení poptávky.</p>
+        </form>
+
+        <div id="form-success" class="form-success hidden">
+          <div class="success-icon">✓</div>
+          <h3>Poptávka odeslána</h3>
+          <p>Děkujeme! Brzy se vám ozveme na uvedené číslo.</p>
+          <a href="tel:+420730507975" class="btn btn-primary">Zavolat rovnou</a>
+        </div>
+      </section>
+
+      <!-- KONTAKT -->
+      <section id="kontakt" class="page">
+        <div class="page-header">
+          <h1>Kontakt</h1>
+          <p>Ozvěte se – rádi přijedeme zaměřit a připravíme nabídku.</p>
+        </div>
+
+        <div class="contact-actions">
+          <a href="tel:+420730507975" class="contact-btn primary">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Zavolat</div>
+              <div class="contact-value">+420 730 507 975</div>
+            </div>
+          </a>
+          <a href="mailto:info@nstropy.cz?subject=Poptávka%20napínaných%20stropů" class="contact-btn">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">E-mail</div>
+              <div class="contact-value">info@nstropy.cz</div>
+            </div>
+          </a>
+          <a href="https://www.nstropy.cz" target="_blank" class="contact-btn">
+            <div class="contact-icon">🌐</div>
+            <div>
+              <div class="contact-label">Web</div>
+              <div class="contact-value">www.nstropy.cz</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="address-card">
+          <h3>Kancelář</h3>
+          <p>Bratislavská 5a<br>602 00 Brno</p>
+          <p class="note">Schůzky pouze po předchozí domluvě.</p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">IČO</span>
+            <span class="info-value">69715441</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">DIČ</span>
+            <span class="info-value">CZ7907284308</span>
+          </div>
+        </div>
+
+        <div class="cta-box" style="margin-top:24px">
+          <h3>Chcete nezávaznou nabídku?</h3>
+          <p>Zavolejte nebo vyplňte poptávku – přijedeme zaměřit zdarma.</p>
+          <button class="btn btn-primary btn-full" onclick="showPage('poptavka')">Vyplnit poptávku</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-page="home" onclick="showPage('home')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Domů</span>
+      </button>
+      <button class="nav-item" data-page="galerie" onclick="showPage('galerie')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span>Galerie</span>
+      </button>
+      <button class="nav-item" data-page="kalkulacka" onclick="showPage('kalkulacka')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/></svg>
+        <span>Kalkul.</span>
+      </button>
+      <button class="nav-item" data-page="poptavka" onclick="showPage('poptavka')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        <span>Poptávka</span>
+      </button>
+      <button class="nav-item" data-page="kontakt" onclick="showPage('kontakt')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Kontakt</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-nav">
+      <button onclick="event.stopPropagation(); changeLightbox(-1)">‹</button>
+      <button onclick="event.stopPropagation(); changeLightbox(1)">›</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
