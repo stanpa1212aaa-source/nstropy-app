@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nstropy-v2';
+const CACHE_NAME = 'nstropy-v3';
 const ASSETS = [
   './',
   './index.html',
