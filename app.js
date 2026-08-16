@@ -83,12 +83,12 @@
 
   // Lightbox
   const galleryImages = [
-    'g1.jpg',
-    'g3.jpg',
-    'g4.jpg',
-    'g5.jpg',
-    'g2.jpg',
-    'g6.jpg'
+    'gallery/g1.jpg',
+    'gallery/g3.jpg',
+    'gallery/g4.jpg',
+    'gallery/g5.jpg',
+    'gallery/g2.jpg',
+    'gallery/g6.jpg'
   ];
   let currentLightbox = 0;
 
