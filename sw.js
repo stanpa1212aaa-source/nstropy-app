@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nstropy-v5';
+const CACHE_NAME = 'nstropy-v6';
 const ASSETS = [
   './',
   './index.html',
@@ -38,9 +38,19 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      return cached || fetch(event.request).catch(() => cached);
-    })
+    fetch(event.request)
+      .then((response) => {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        return response;
+      })
+      .catch(() =>
+        caches.match(event.request).then((cached) =>
+          cached || (event.request.mode === 'navigate' ? caches.match('./index.html') : undefined)
+        )
+      )
   );
 });
