@@ -46,7 +46,7 @@
     resultEl.classList.remove('hidden');
   };
 
-  // Inquiry form – opens email client with prefilled data
+  // Inquiry form
   window.submitInquiry = function (e) {
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
@@ -78,18 +78,17 @@
     document.getElementById('inquiry-form').classList.add('hidden');
     document.getElementById('form-success').classList.remove('hidden');
 
-    // Open mail client after short delay so user sees success
     setTimeout(() => { window.location.href = mailto; }, 600);
   };
 
   // Lightbox
   const galleryImages = [
-    'gallery/g1.jpg',
-    'gallery/g3.jpg',
-    'gallery/g4.jpg',
-    'gallery/g5.jpg',
-    'gallery/g2.jpg',
-    'gallery/g6.jpg'
+    'g1.jpg',
+    'g3.jpg',
+    'g4.jpg',
+    'g5.jpg',
+    'g2.jpg',
+    'g6.jpg'
   ];
   let currentLightbox = 0;
 
