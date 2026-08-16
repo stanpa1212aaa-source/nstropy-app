@@ -1,4 +1,4 @@
-# Nstropy – Mobilní aplikace (PWA)
+# Nstropy – Mobilní aplikace (PWA + APK)
 
 Kompletní prezentace firmy **Nstropy.cz** – napínané stropy.
 
@@ -20,20 +20,49 @@ Aplikace funguje offline a vypadá jako nativní aplikace.
 
 1. Nahrajte celou složku `nstropy-android-app` na jakýkoliv hosting  
    (Netlify Drop, Vercel, GitHub Pages, nebo váš vlastní web).
-2. Získejte veřejnou URL (např. `https://stanpa1212aaa-source.github.io/nstropy-app/`).
+2. Získejte veřejnou URL (např. `https://nstropy-app.netlify.app`).
 3. Jděte na **https://www.pwabuilder.com**
 4. Vložte URL a klikněte **Start**.
 5. V sekci **Android** klikněte **Package** → stáhněte **APK**.
 6. APK nainstalujete na telefon (povolte „Neznámé zdroje“).
 
+### Alternativa – Bubblewrap (pro vývojáře)
+
+```bash
+npm i -g @bubblewrap/cli
+bubblewrap init --manifest https://vaše-url/manifest.json
+bubblewrap build
+```
+
 ---
 
-## GitHub Pages
+## Lokální testování
 
-Po nahrání obrázků (gallery + ikony) zapněte Pages:
-Settings → Pages → Source: Deploy from a branch → main / root.
+```bash
+cd nstropy-android-app
+npx serve
+# nebo python3 -m http.server 8080
+```
 
-URL bude: https://stanpa1212aaa-source.github.io/nstropy-app/
+Otevřete v Chrome na telefonu a „Přidat na plochu“.
+
+---
+
+## Ceny v kalkulačce
+
+Orientační prodejní ceny vycházejí z interního ceníku 2026 (PC sloupec):
+
+| Typ                  | Od Kč/m² |
+|----------------------|----------|
+| Mat / Satin bílý     | 450      |
+| Lesk                 | 520      |
+| Translucent          | 650      |
+| S fototiskem         | 800      |
+| Speciální            | 1400     |
+
++ příplatky za osvětlení a složitost místnosti.
+
+Finální cena vždy po zaměření.
 
 ---
 
