@@ -1,10 +1,11 @@
-const CACHE_NAME = 'nstropy-v4';
+const CACHE_NAME = 'nstropy-v5';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
   './manifest.json',
+  './assets/nstropy-logo.svg',
   './logo-clean.png',
   './logo.png',
   './header-logo.png',
