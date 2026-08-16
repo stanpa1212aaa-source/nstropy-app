@@ -54,7 +54,7 @@ Orientační prodejní ceny vycházejí z interního ceníku 2026 (PC sloupec):
 
 | Typ                  | Od Kč/m² |
 |----------------------|----------|
-| Mat / Satin bílý     | 450      |
+| Mat / Satin bílý     | 500      |
 | Lesk                 | 520      |
 | Translucent          | 650      |
 | S fototiskem         | 800      |
